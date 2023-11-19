@@ -49,6 +49,47 @@ class Hero {
       Contoh fungsi bisa mengikuti fungsi jalan() diatas.
 
     */
-    
+
+    fun lari() {
+        checkHealth()
+        println("$name sedang berlari...")
+        health -= 2
+    }
+    fun makan() {
+        checkHealth()
+        println("$name sedang makan...")
+        health += 2
+    }
+    fun minum() {
+        checkHealth()
+        println("$name sedang minum...")
+        health += 2
+    }
+    fun lompat() {
+        checkHealth()
+        println("$name sedang lompat...")
+        health -= 2
+    }
+    fun duduk() {
+        checkHealth()
+        println("$name sedang duduk...")
+        health += 1
+    }
+
+}
+
+fun runchallange(hero: Hero, activities: List<String>, counts: List<Int>) {
+    for (i in activities.indices) {
+        repeat(counts[i]) {
+            when (activities[i]) {
+                "jalan" -> hero.jalan()
+                "lari" -> hero.lari()
+                "makan" -> hero.makan()
+                "minum" -> hero.minum()
+                "lompat" -> hero.lompat()
+                "duduk" -> hero.duduk()
+            }
+        }
+    }
 }
 

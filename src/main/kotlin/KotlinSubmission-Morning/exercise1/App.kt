@@ -10,6 +10,15 @@ Lengkapi fungsi myProfile di bawah ini dengan membuat variabel dengan ketentuan 
 Dan Cetak setiap variabel ke layar saat variable myProfile di panggil
  */
 fun myProfile() {
+    val namadepan: String = "Hana"
+    val namatengah: String = "Mardini"
+    val namabelakang: String = "Putri"
+    val umur: Int = 20
+    val single: Boolean = true
+
+    println("Nama: $namadepan $namatengah $namabelakang")
+    println("Umur: $umur tahun")
+    println("Status: ${if (single) "Single" else "Not Single"}")
 
 }
 
@@ -19,7 +28,11 @@ fun myProfile() {
  *  Lengkapi fungsi di bawah ini agar dapat mencetak nilai dari parameter-parameter yang ada dengan fungsi println
  */
 fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
-    return ""
+    println("Group ID: $groupId")
+    println("Group Member: $groupMember")
+    println("Session: $session")
+
+    return "Group details printed succesfully"
 }
 
 /**
@@ -29,8 +42,10 @@ fun groupDetail(groupId: String, groupMember: List<Any>, session: String): Any {
  *
  */
 fun myTeam(): List<Any> {
+    val groupMembers =  listOf("Hana Mardini Putri", "Vera Romandhon", "Margaretha Meylia Herde", "Wiriawan Nasution", "M Thoriq Ambia", "Rifkha Khairuna", "Amalia Fyrdausa", "Safira Asari", "Adryan Eka Pramudita", "M. Fajri Maulana", "Lalu Momena Galih Sijunjung")
+    println("List of Group Members: $groupMembers")
 
-    return listOf()
+    return groupMembers
 }
 
 /**
@@ -41,10 +56,10 @@ fun myTeam(): List<Any> {
  *
  */
 fun totalMember(): Int {
-    val mentor = arrayOf<String>()
-    val countOfGroup = arrayOf<String>()
+    val mentor = arrayOf("Kak Reynaldi", "Kak Malik")
+    val countOfGroup = 11
 
-    return 0
+    return mentor.size + countOfGroup
 }
 
 fun main() {
@@ -62,6 +77,6 @@ fun main() {
      *  Ubah nilai argumen-argumen dari fungsi groupDetail di bawah ini sesuai dengan data group kamu
      *
      */
-    groupDetail("", listOf(), "")
+    groupDetail("11", listOf("Hana Mardini Putri", "Vera Romandhon", "Margaretha Meylia Herde", "Wiriawan Nasution", "M Thoriq Ambia", "Rifkha Khairuna", "Amalia Fyrdausa", "Safira Asari", "Adryan Eka Pramudita", "M. Fajri Maulana", "Lalu Momena Galih Sijunjung"), "Morning")
 
 }
